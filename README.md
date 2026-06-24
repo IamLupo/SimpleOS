@@ -7,6 +7,9 @@ SimpleOS with kernel in C and Assembly
 	ld -m elf_i386 -T link.ld -o iso/boot/kernel.bin kasm.o kc.o
 	grub-mkrescue -o os.iso iso
 
+## Packages
+
+	sudo apt-get install nasm xorriso
 
 ## Build cmake
 
