@@ -7,7 +7,7 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/iso DESTINATION ${CMAKE_CURRENT_BINARY_DIR
 
 # Set NASM and GCC flags
 set(CMAKE_ASM_NASM_OBJECT_FORMAT elf32)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32 -ffreestanding -fno-pic -fno-pie -fno-stack-protector -nostdlib -nostdinc")
 
 # Set custom linker
 set(CMAKE_C_LINK_EXECUTABLE ld)
